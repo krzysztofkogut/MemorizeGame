@@ -10,7 +10,7 @@ import SwiftUI
 class EmojiMemorizeGame: ObservableObject {
     @Published private var model: MemorizeGame<String> = EmojiMemorizeGame.createMemorizeGame()
     
-    static func createMemorizeGame() -> MemorizeGame<String> {
+    private static func createMemorizeGame() -> MemorizeGame<String> {
         let emojis: Array<String> = ["👻","🎃","🕷"]
         return MemorizeGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in
             return emojis[pairIndex]
