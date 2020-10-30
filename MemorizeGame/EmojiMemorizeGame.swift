@@ -29,4 +29,8 @@ class EmojiMemorizeGame: ObservableObject {
         objectWillChange.send()
         model.choose(card: card)
     }
+    
+    func resetGame() {
+        model = EmojiMemorizeGame.createMemorizeGame()
+    }
 }
